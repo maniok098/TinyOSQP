@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Interface_TcCOM" Id="{c0114b8b-4315-4115-b42d-e22b6944a3b2}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Interface_TcCOM
+// Interface to TcCOM object
+//  1. define the interface pointer (ip)
+//  2. define the interface ID      (iid)
+VAR_OUTPUT
+	ip : I_QPopt;  // (1.) C++ projekt -> .tmc -> Data Types -> InterfaceNAME
+END_VAR
+VAR
+	{attribute 'TcInitSymbol'}
+	nObjId : OTCID; 	// Instance configured to be retrieved
+	iid : IID :=  TC_GLOBAL_IID_LIST.IID_I_QPopt; // (2.) TC_GLOBAL_IID_LIST.IID_InterfaceNAME;
+	hrInit : HRESULT;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="FB_exit" Id="{effb8b62-d66c-4fb7-8b2a-2732b18d3dc4}">
+      <Declaration><![CDATA[METHOD FB_exit : BOOL
+VAR_INPUT
+	bInCopyCode : BOOL; // if TRUE, the exit method is called for exiting an instance that is copied afterwards (online change).
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT bInCopyCode THEN // if not online change
+	FW_SafeRelease(ADR(ip));
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{93a23d53-7d66-41e1-b9b5-366bb147deb9}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT bInCopyCode THEN // if not online change
+	IF nObjID <> 0 THEN
+		hrInit := FW_ObjMgr_GetObjectInstance(oid:=nObjID, iid:=iid, pipUnk:=ADR(ip));
+	ELSE
+		hrInit := E_HRESULTAdsErr.INVALIDOBJID;
+	END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Interface_TcCOM">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Interface_TcCOM.FB_exit">
+      <LineId Id="7" Count="1" />
+      <LineId Id="6" Count="0" />
+    </LineIds>
+    <LineIds Name="Interface_TcCOM.FB_init">
+      <LineId Id="13" Count="5" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

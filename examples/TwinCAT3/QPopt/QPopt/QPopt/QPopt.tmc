@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass">
+  <Vendor>
+    <Name>C++ Module Vendor</Name>
+  </Vendor>
+  <DataTypes ><DataType><Name GUID="{62ad4421-e531-40b8-a0b4-01255fa59ec4}">I_QPopt</Name><BaseType GUID="{00000001-0000-0000-e000-000000000064}">ITcUnknown</BaseType><Method><Name>solve</Name><ReturnType GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</ReturnType><Parameter><Name>in1</Name><Type GUID="{18071995-0000-0000-0000-00000000000e}" PointerTo="1">LREAL</Type></Parameter><Parameter><Name>out1</Name><Type GUID="{18071995-0000-0000-0000-00000000000e}" PointerTo="1">LREAL</Type></Parameter></Method><Hides><Hide GUID="{a57d1ebe-e932-4639-a344-5348ade6246b}" /></Hides></DataType></DataTypes>
+  <Groups>
+    <Group SortOrder="701">
+      <Name>C++</Name>
+      <DisplayName>C++ Modules</DisplayName>
+    </Group>
+  </Groups>
+  <Modules>
+    <Module GUID="{e0c0c32a-147b-4524-9842-e1ad0bfedc61}" Group="C++">
+      <Name>M_QPopt</Name>
+      <CLSID ClassFactory="QPopt">{e0c0c32a-147b-4524-9842-e1ad0bfedc61}</CLSID>
+      <Licenses>
+        <License>
+          <LicenseId>{304D006A-8299-4560-AB79-438534B50288}</LicenseId>
+          <Comment>TC3 C++</Comment>
+        </License>
+      </Licenses>
+      <InitSequence>PSO</InitSequence>
+      <Contexts />
+      <Interfaces>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{00000012-0000-0000-E000-000000000064}">ITComObject</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000012-0000-0000-E000-000000000064}">ITcADI</Type>
+        </Interface>
+        <Interface DisableCodeGeneration="true">
+          <Type GUID="{03000018-0000-0000-E000-000000000064}">ITcWatchSource</Type>
+        </Interface><Interface><Type GUID="{62ad4421-e531-40b8-a0b4-01255fa59ec4}">I_QPopt</Type></Interface>
+      </Interfaces>
+      <Parameters />
+      <DataAreas />
+      <InterfacePointers />
+      <DataPointers />
+      <Deployment />
+    </Module>
+  </Modules>
+  <Library>
+    <Name>QPopt</Name>
+    <Version>0.0.0.1</Version>
+  </Library>
+</TcModuleClass>

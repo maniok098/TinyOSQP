@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{78038992-c6a1-471d-81cb-4ff5c22444e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e826afc4-d3cc-4b49-805a-ddd9767e3f3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TwinCAT UM Files">
+      <UniqueIdentifier>{20afb1fa-2f64-4d54-abbf-cdd208a03686}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TwinCAT RT Files">
+      <UniqueIdentifier>{bf4ed9c8-4831-4e01-ac1d-b8b03e8347d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TwinCAT OS Files">
+      <UniqueIdentifier>{f0000ab4-3408-47f8-bef9-be1e1d2c8b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TMC Files">
+      <UniqueIdentifier>{e2243d62-ae66-4aaa-8517-ffbc346a4106}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>TwinCAT UM Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TcPch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPoptClassFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPoptInterfaces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPoptServices.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPoptCtrl.h">
+      <Filter>TwinCAT UM Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QPoptDriver.h">
+      <Filter>TwinCAT RT Files</Filter>
+    </ClInclude>
+    <ClInclude Include="M_QPopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="osqp\algebra_impl.h" />
+    <ClInclude Include="osqp\algebra_matrix.h" />
+    <ClInclude Include="osqp\algebra_vector.h" />
+    <ClInclude Include="osqp\amd.h" />
+    <ClInclude Include="osqp\amd_internal.h" />
+    <ClInclude Include="osqp\auxil.h" />
+    <ClInclude Include="osqp\csc_math.h" />
+    <ClInclude Include="osqp\csc_utils.h" />
+    <ClInclude Include="osqp\derivative.h" />
+    <ClInclude Include="osqp\error.h" />
+    <ClInclude Include="osqp\glob_opts.h" />
+    <ClInclude Include="osqp\kkt.h" />
+    <ClInclude Include="osqp\lin_alg.h" />
+    <ClInclude Include="osqp\osqp.h" />
+    <ClInclude Include="osqp\osqp_api_constants.h" />
+    <ClInclude Include="osqp\osqp_api_functions.h" />
+    <ClInclude Include="osqp\osqp_api_types.h" />
+    <ClInclude Include="osqp\osqp_api_utils.h" />
+    <ClInclude Include="osqp\osqp_configure.h" />
+    <ClInclude Include="osqp\osqp_export_define.h" />
+    <ClInclude Include="osqp\polish.h" />
+    <ClInclude Include="osqp\printing.h" />
+    <ClInclude Include="osqp\qdldl.h" />
+    <ClInclude Include="osqp\qdldl_interface.h" />
+    <ClInclude Include="osqp\reduced_kkt.h" />
+    <ClInclude Include="osqp\scaling.h" />
+    <ClInclude Include="osqp\SuiteSparse_config.h" />
+    <ClInclude Include="osqp\types.h" />
+    <ClInclude Include="osqp\util.h" />
+    <ClInclude Include="osqp\version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TcPch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPoptClassFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPoptCtrl.cpp">
+      <Filter>TwinCAT UM Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPoptW32.cpp">
+      <Filter>TwinCAT UM Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPoptDriver.cpp">
+      <Filter>TwinCAT RT Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QPoptMain.cpp">
+      <Filter>TwinCAT OS Files</Filter>
+    </ClCompile>
+    <ClCompile Include="M_QPopt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="osqp\algebra_libs.cpp" />
+    <ClCompile Include="osqp\amd_1.cpp" />
+    <ClCompile Include="osqp\amd_2.cpp" />
+    <ClCompile Include="osqp\amd_aat.cpp" />
+    <ClCompile Include="osqp\amd_control.cpp" />
+    <ClCompile Include="osqp\amd_defaults.cpp" />
+    <ClCompile Include="osqp\amd_info.cpp" />
+    <ClCompile Include="osqp\amd_order.cpp" />
+    <ClCompile Include="osqp\amd_post_tree.cpp" />
+    <ClCompile Include="osqp\amd_postorder.cpp" />
+    <ClCompile Include="osqp\amd_preprocess.cpp" />
+    <ClCompile Include="osqp\amd_valid.cpp" />
+    <ClCompile Include="osqp\auxil.cpp" />
+    <ClCompile Include="osqp\csc_math.cpp" />
+    <ClCompile Include="osqp\csc_utils.cpp" />
+    <ClCompile Include="osqp\derivative.cpp" />
+    <ClCompile Include="osqp\error.cpp" />
+    <ClCompile Include="osqp\kkt.cpp" />
+    <ClCompile Include="osqp\matrix.cpp" />
+    <ClCompile Include="osqp\osqp_api.cpp" />
+    <ClCompile Include="osqp\polish.cpp" />
+    <ClCompile Include="osqp\qdldl.cpp" />
+    <ClCompile Include="osqp\qdldl_interface.cpp" />
+    <ClCompile Include="osqp\reduced_kkt.cpp" />
+    <ClCompile Include="osqp\scaling.cpp" />
+    <ClCompile Include="osqp\SuiteSparse_config.cpp" />
+    <ClCompile Include="osqp\util.cpp" />
+    <ClCompile Include="osqp\vector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="QPopt.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="QPoptW32.rc">
+      <Filter>TwinCAT UM Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QPoptW32.def">
+      <Filter>TwinCAT UM Files</Filter>
+    </None>
+    <None Include="QPopt.tmc">
+      <Filter>TMC Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="QPoptW32.idl">
+      <Filter>TwinCAT UM Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>
